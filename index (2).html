@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Registration Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: #fff;
+    }
+
+    .form-container {
+      width: 700px;
+      margin: 50px auto;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      border: 1px solid #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+    }
+
+    .section h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-decoration: underline;
+    }
+
+    label {
+      display: inline-block;
+      width: 150px;
+      vertical-align: top;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 60%;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    input[type="file"] {
+      color: #fff;
+    }
+
+    .radio-group {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .radio-group input {
+      margin-left: 10px;
+    }
+
+    textarea {
+      width: 90%;
+      resize: none;
+    }
+
+    .submit-btn {
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 30px;
+      background-color: yellow;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #f1c40f;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Course Registration Form</h2>
+
+    <fieldset class="section">
+      <legend>Personal Details</legend>
+      <label>First Name:</label><input type="text" name="firstname"><br>
+      <label>Surname:</label><input type="text" name="surname"><br>
+      <label>Mobile No:</label><input type="tel" name="mobile"><br>
+      <label>Email:</label><input type="email" name="email"><br>
+      <label>Password:</label><input type="password" name="password"><br>
+      <label>Confirm Password:</label><input type="password" name="confirm_password"><br>
+      <label>DOB:</label><input type="date" name="dob"><br>
+      <label>Age:</label><input type="number" name="age"><br>
+
+      <label>Gender:</label>
+      <span class="radio-group">
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Others"> Others
+      </span><br>
+
+      <label>Country:</label>
+      <select>
+        <option>India</option>
+        <option>USA</option>
+        <option>Russia</option>
+        <option>Others</option>
+      </select><br>
+
+      <label>Upload Picture:</label>
+      <input type="file" name="picture"><br>
+    </fieldset>
+
+    <fieldset class="section">
+      <legend>Course Details</legend>
+      <label>Select Course:</label>
+      <select>
+        <option>Python Full Stack</option>
+        <option>Java Full Stack</option>
+      </select><br>
+
+      <label>Delivery Mode:</label>
+      <span class="radio-group">
+        <input type="radio" name="mode" value="Online"> ONLINE
+        <input type="radio" name="mode" value="Offline"> OFFLINE
+      </span><br>
+
+      <label>Institute Name:</label>
+      <input type="text" value="TAP ACADEMY" readonly><br>
+
+      <label>Comments:</label><br>
+      <textarea rows="3" cols="40"></textarea>
+    </fieldset>
+
+    <button class="submit-btn">Submit</button>
+  </body>
+
+</body>
+</html>
